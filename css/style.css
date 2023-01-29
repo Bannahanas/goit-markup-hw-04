@@ -1,0 +1,70 @@
+:root {
+    --primary-text-color: #434455;
+    --title-text-color: #2E2F42;
+    --accent-color: #4D5AE5;
+    --primary-bg-color: #E5E5E5;
+    --secondary-bg-color: #2E2F42;
+    --primary-white-color: #FFFFFF;
+
+}
+
+.page {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+.list {
+    list-style: none;
+}
+
+.auth-nav .list {
+    color: var(--primary-text-color);
+}
+
+.logo {
+    color: var(--title-text-color);
+}
+
+.accent {
+    color: var(--accent-color);
+}
+
+.site-nav .link {
+    color: var(--title-text-color);
+}
+
+.hero {
+    background-color:  var(--secondary-bg-color);
+}
+
+.hero-list {
+    color: var(--primary-white-color);
+}
+
+.feature-list .title {
+    color: var(--title-text-color);
+}
+
+.work-list .title {
+ color: var(--title-text-color);
+}
+
+.button {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+}
+
+.footer {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-white-color);
+}
+
+.footer .logo {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-white-color);
+}
+
+.progect-list .title {
+    color: var(--title-text-color);
+   }
+
