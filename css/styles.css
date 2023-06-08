@@ -96,8 +96,6 @@ button {
 }
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
     padding-left: 156px;
     border-bottom: 1px solid var(--secondary-button-color);
 }
@@ -130,6 +128,8 @@ button {
 .header-menu {
     display: flex;
     gap: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .header-menu-link {
@@ -165,12 +165,12 @@ button {
 
 .hero {
     background-color: var(--secondary-bg-color);
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-container {
     display: block;
-    padding-top: 188px;
-    padding-bottom: 188px;
 }
 
 .hero-title {
@@ -180,10 +180,7 @@ button {
     line-height: 1.1;
     letter-spacing: 0.04em;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto;
     max-width: 496px;
 }
 
@@ -193,12 +190,10 @@ button {
     display: block;
     padding: 16px 32px;
     gap: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 48px;
-    margin-bottom: 0;
+    margin: 48px auto 0;
     min-width: 169px;
     height: 56px;
+    border: none;
 }
 
 .hero-button:hover,
@@ -206,14 +201,24 @@ button {
     background-color: var(--second-accent-color);
 }
 
+.feature {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .feature-list {
     display: flex;
     padding: 0px;
-    gap: 8px;
+    gap: 24px;
 }
 
 .feature-item {
     width: calc((100% - 24px * 3) / 4);
+    margin-right: 24px;
+}
+
+.last {
+    margin-right: 0;
 }
 
 .feature-subtitle {
@@ -293,10 +298,11 @@ button {
     line-height: 1.3;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
+    margin-bottom: 16px;
 }
 
 .footer-logo span {
