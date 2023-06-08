@@ -182,6 +182,8 @@ button {
     text-align: center;
     margin: 0 auto;
     max-width: 496px;
+    min-height: 120px;
+    margin-bottom: 48px;
 }
 
 .hero-button {
