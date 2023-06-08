@@ -10,19 +10,6 @@
     --second-logo-color: #f4f4fd;
 }
 
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-}
-
 .list {
     list-style-type: none;
     margin: 0;
@@ -74,6 +61,19 @@ button {
     margin: 0 auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 .section-title {
     color: var(--title-text-color);
     font-weight: 700;
@@ -98,8 +98,6 @@ button {
 .header {
     padding-left: 156px;
     border-bottom: 1px solid var(--secondary-button-color);
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .header-container {
@@ -138,6 +136,8 @@ button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .header-menu-link:hover,
@@ -157,6 +157,8 @@ button {
     font-size: 16px;
     line-height: 1.5;
     color: var(--primary-text-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .header-address-link:hover,
@@ -250,20 +252,19 @@ button {
 
 .work {
     background-color: var(--section-bg-color);
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .work-title {
     max-width: 162px;
     margin: 0 auto;
-    padding-top: 120px;
     margin-bottom: 72px;
 }
 
 .work-list {
     display: flex;
     gap: 24px;
-    padding-bottom: 120px;
-
 }
 
 .work-item {
@@ -383,6 +384,7 @@ button {
 .project-container {
     padding: 32px 16px;
     border: 1px solid var(--secondary-button-color);
+    border-top: none;
 }
 
 .project-title {
