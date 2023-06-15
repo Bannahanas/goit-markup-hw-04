@@ -1,13 +1,14 @@
 :root {
     --primary-text-color: #434455;
-    --title-text-color: #2e2f42;
-    --accent-color: #4d5ae5;
+    --subtitle-color: #8e8f99;
+    --primary-brand: #4d5ae5;
     --section-bg-color: #e5e5e5;
-    --secondary-bg-color: #2e2f42;
+    --dark-color: #2e2f42;
     --primary-white-color: #ffffff;
-    --second-accent-color: #404bbf;
-    --secondary-button-color: #e7e9fc;
-    --second-logo-color: #f4f4fd;
+    --pressed-state: #404bbf;
+    --accent-color: #e7e9fc;
+    --light-color: #f4f4fd;
+    --success-color: #31d0aa;
 }
 
 .list {
@@ -75,7 +76,7 @@ button {
 }
 
 .section-title {
-    color: var(--title-text-color);
+    color: var(--dark-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
@@ -83,7 +84,7 @@ button {
 }
 
 .section-subtitle {
-    color: var(--title-text-color);
+    color: var(--dark-color);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -112,7 +113,7 @@ button {
 }
 
 .header-logo {
-    color: var(--title-text-color);
+    color: var(--dark-color);
     font-family: Raleway, cursive;
     font-weight: 800;
     font-size: 18px;
@@ -123,7 +124,7 @@ button {
 }
 
 .header-logo span {
-    color: var(--accent-color);
+    color: var(--primary-brand);
 }
 
 .header-menu {
@@ -132,7 +133,7 @@ button {
 }
 
 .header-menu-link {
-    color: var(--title-text-color);
+    color: var(--dark-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -142,7 +143,7 @@ button {
 
 .header-menu-link:hover,
 .header-menu-link:focus {
-    color: var(--second-accent-color);
+    color: var(--pressed-state);
 }
 
 .header-address-menu {
@@ -163,13 +164,36 @@ button {
 
 .header-address-link:hover,
 .header-address-link:focus {
-    color: var(--second-accent-color);
+    color: var(--pressed-state);
+}
+
+.current {
+    position: relative;
+}
+
+.current::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -2px;
+    border-radius: 2px;
+    background-color: var(--pressed-state);
 }
 
 .hero {
-    background-color: var(--secondary-bg-color);
+    background-color: var(--dark-color);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), 
+        url(../images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 100%;
+    width: 1440px;
+    height: 600px;
 }
 
 .hero-container {
@@ -191,7 +215,7 @@ button {
 
 .hero-button {
     color: var(--primary-white-color);
-    background-color: var(--accent-color);
+    background-color: var(--primary-brand);
     display: block;
     padding: 16px 32px;
     gap: 10px;
@@ -204,7 +228,7 @@ button {
 
 .hero-button:hover,
 .hero-button:focus {
-    background-color: var(--second-accent-color);
+    background-color: var(--pressed-state);
 }
 
 .feature {
@@ -221,9 +245,28 @@ button {
 .feature-item {
     width: calc((100% - 72px) / 4);
     margin-right: 0;
+    position: relative;
+}
+
+.feature-item-block {
+    position: relative;
+    border: 1px solid var(--light-color);
+    border-radius: 4px;
+    background-color: var(--light-color);
+    width: 264px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item-icon {
+    position: absolute;
+    top: 24px;
 }
 
 .feature-subtitle {
+    margin-top: 8px;
     margin-bottom: 8px;
 }
 
@@ -268,7 +311,7 @@ button {
     max-width: 264px;
     max-height: 380px;
     padding: 0px 0px 32px;
-    background: #FFFFFF;
+    background: var(--primary-white-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
                 0px 1px 1px rgba(46, 47, 66, 0.16), 
                 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -293,8 +336,34 @@ button {
     text-align: center;
 }
 
+.work-social {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+.work-social-item {
+    content: '';
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-brand);
+}
+
+.work-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .footer {
-    background-color: var(--secondary-bg-color);
+    background-color: var(--dark-color);
     color: var(--primary-white-color);
     padding-top: 100px;
     padding-bottom: 100px;
@@ -316,7 +385,7 @@ button {
 }
 
 .footer-logo span {
-    color: var(--accent-color);
+    color: var(--primary-brand);
 }
 
 .footer-text {
@@ -329,9 +398,30 @@ button {
     max-height: 72px;
 }
 
+.footer-container {
+    display: flex;
+    width: 208px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social {
+    display: flex;
+    padding: 0px;
+    gap: 16px;
+    max-width: 208px;
+    max-height: 40px;
+}
+
+.footer-social-item {
+    display: flex;
+
+}
+
 .filter-button {
     background-color: var(--secondary-button-color);
-    color: var(--second-accent-color);
+    color: var(--pressed-state);
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     padding: 12px 24px;
@@ -342,7 +432,7 @@ button {
 
 .filter-button:hover,
 .filter-button:focus {
-    background-color: var(--second-accent-color);
+    background-color: var(--pressed-state);
     color: var(--primary-white-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
                 0px 2px 1px rgba(0, 0, 0, 0.08), 
