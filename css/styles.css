@@ -100,6 +100,7 @@ button {
 .header {
     padding-left: 156px;
     border-bottom: 1px solid var(--secondary-button-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -172,6 +173,8 @@ button {
 
 .current {
     position: relative;
+    color: #404bbf;
+    transition: var(--transition);
 }
 
 .current::after {
@@ -180,7 +183,7 @@ button {
     width: 100%;
     height: 4px;
     left: 0;
-    bottom: -2px;
+    bottom: -1px;
     border-radius: 2px;
     background-color: var(--pressed-state);
 }
@@ -194,8 +197,8 @@ button {
     background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px;
-    max-width: 100%;
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 600px;
 }
 
@@ -227,6 +230,7 @@ button {
     height: 56px;
     border: none;
     border-radius: 4px;
+    transition: var(--transition);
 }
 
 .hero-button:hover,
@@ -262,6 +266,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 8px;
 }
 
 .feature-item-icon {
@@ -271,7 +276,6 @@ button {
 
 .feature-subtitle {
     margin-top: 8px;
-    margin-bottom: 8px;
 }
 
 .ability {
@@ -345,8 +349,7 @@ button {
     gap: 24px;
     align-items: center;
     justify-content: center;
-    margin-top: 8px;
-    margin-bottom: 32px;
+    padding: 32px 0;
 }
 
 .work-social-item {
@@ -354,8 +357,6 @@ button {
     display: flex;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: var(--primary-brand);
 }
 
 .work-social-link {
@@ -364,6 +365,17 @@ button {
     align-items: center;
     width: 100%;
     height: 100%;
+    background-color: var(--primary-brand);
+    border-radius: 50%;
+}
+
+.work-social-link:hover,
+.work-social-link:focus {
+    background-color: var(--pressed-state);
+}
+
+.work-social-icons {
+    fill: #f4f4fd;
 }
 
 .footer {
@@ -472,13 +484,9 @@ button {
     gap: 8px;
 }
 
-.project-item-block {
-    position: relative;
-    overflow: hidden;
-}
-
-.project-item:hover .project-cover-block {
-    transform: translate(0);
+.project-item:hover .project-cover-block,
+.project-item:focus .project-cover-block {
+    transform: translate(0%);
     transition: var(--transition);
 }
 
@@ -487,6 +495,7 @@ button {
     border: 1px solid var(--secondary-button-color);
     border-top: none;
 }
+
 
 .project-title {
     align-items: center;
@@ -501,22 +510,30 @@ button {
     max-height: 24px;
 }
 
+.project-cover {
+    position: relative;
+    overflow: hidden;
+}
+
 .project-cover-block {
-    position: absolute;
-    background-color: var(--primary-brand);
-    top: 0;
-    left: 0;
     width: 360px;
-    transform: translateY(100%);
-    transition: transform var(--transition);
+    height: 300px;
 }
 
 .project-cover-text {
+    position: absolute;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--light-color);
+    color: #f4f4fd;
+    top: 0;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform var(--transition);
 }
 
 
